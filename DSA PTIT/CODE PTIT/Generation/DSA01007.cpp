@@ -7,7 +7,7 @@ void initial()
     for(int i = 1; i<=n; i++)
         s[i] = 'A';
 }
-void generative()
+void generate()
 {
     int i = n;
     while(s[i] == 'B')
@@ -36,7 +36,7 @@ int main()
                 cout<<s[i];
             }
             cout<<" ";
-            generative();
+            generate();
         }
         cout<<endl;
     }
