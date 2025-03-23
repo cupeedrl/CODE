@@ -22,7 +22,7 @@ int inspect()
     }
     return 1;
 }
-void generative()
+void generate()
 {
     int i = n-1;
     while(i >= 0 && s[i] == 'H')
@@ -51,7 +51,7 @@ int main()
             {
                 cout << s << endl;
             }
-            generative();
+            generate();
         }
         check = 0;
     }
