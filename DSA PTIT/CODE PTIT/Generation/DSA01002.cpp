@@ -2,7 +2,7 @@
 int n,k;
 int a[1001];
 using namespace std;
-void generative()
+void generate()
 {
     int i = k;
     while(i > 0 && a[i] == n-k+i)
@@ -37,7 +37,7 @@ int main()
         {
             cin >> a[i];
         }
-        generative();
+        generate();
         for(int j = 1; j<=k;j++)
             cout << a[j] <<" ";
         cout << endl; 
