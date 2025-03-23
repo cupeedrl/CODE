@@ -24,7 +24,7 @@ int main()
     {
         string s;
         getline(cin,s);
-        generative(s);
+        generate(s);
         cout << s << endl;
     }
 }
