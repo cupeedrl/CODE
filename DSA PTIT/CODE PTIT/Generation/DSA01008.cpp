@@ -14,7 +14,7 @@ int inspect()
 {
     return count(s.begin(), s.end(), '1');
 }
-void generative()
+void generate()
 {
     int i = n-1;
     while(s[i] == '1' && i >= 0)
@@ -43,7 +43,7 @@ int main()
             {
                 cout << s << endl;
             }
-             generative();
+             generate();
         }
         check = 0;
     }
