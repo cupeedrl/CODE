@@ -3,7 +3,7 @@ int n;
 int a[1001];
 using namespace std;
 // for this generation type ex, we shoubld let i start with 1;
-void generative()
+void generate()
 {
     int i = n-1;
     while(i > 0 && a[i] >= a[i+1])
@@ -48,7 +48,7 @@ int main()
             cin >> a[i];
         }
 
-        generative();
+        generate();
         
     }
 }
