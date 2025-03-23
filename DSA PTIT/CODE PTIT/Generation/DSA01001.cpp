@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void generative(string &s)
+void generate(string &s)
 {
     int n = s.length();
     int i = n-1;
