@@ -22,7 +22,7 @@ void check()
         cout <<endl;
     }
 }
-int generative()
+int generate()
 {
     int i = n;
     while(a[i] == 1)
@@ -46,5 +46,5 @@ int main()
     {
         check();
     } 
-    while(generative());
+    while(generate());
 }
