@@ -9,7 +9,7 @@ void initial()
     for(int j = 1; j<=k;j++)
         a[j] =j;
 }
-void generative()
+void generate()
 {
     int i = k;
     while(i > 0 && a[i] == n-k+i)
@@ -46,7 +46,7 @@ int main()
                 cout <<a[j];
             }
             cout <<" ";
-            generative(); 
+            generate(); 
         }
         cout << endl; 
     }
