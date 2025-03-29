@@ -3,7 +3,7 @@ using namespace std;
 int n,k, x[1001];
 void display()
 {
-	for(int i = 1; i<= k; i++)
+	for(int i = 1; i<= n; i++)
 	{
 		cout << x[i];
 	}
@@ -11,10 +11,10 @@ void display()
 }
 void Try(int i)
 {
-	for(int j = x[i-1]+1; j<= n-k+i; j++)
+	for(int j = 0; j<=1; j++)
 	{
 		x[i] = j;
-		if(i == k)
+		if(i == n)
 			display();
 		else
 		{
@@ -25,6 +25,6 @@ void Try(int i)
 int main()
 {
 
-	cin >> n >> k;
+	cin >> n ;
 	Try(1);
 }
