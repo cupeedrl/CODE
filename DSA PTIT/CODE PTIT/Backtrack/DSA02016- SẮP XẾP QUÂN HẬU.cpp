@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 int res,n,chess[20];
+// base on being required, max n is = 10, so we have traverse 2.10-1 diagonals, so chess[20] not 15.
 int mark[20];
 int dx[20],dn[20];
 using namespace std;
