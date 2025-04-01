@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 int n,k,check;
-int a[1001],used[1001];
-int res[1001];
+int a[1001];
+int x[1001];
 using namespace std;
 void display (int size) 
 {
@@ -9,20 +9,20 @@ void display (int size)
     cout<<"[";
     for(int i = 1; i < size; i++)
     {
-        cout<< res[i]<< " ";
+        cout<< x[i]<< " ";
     }
-    cout<<res[size]<< "] ";
+    cout<<x[size]<< "] ";
 }
-void seek(int cur,int sum, int pre)
+void seek(int i,int sum, int pre)
 {
     for(int j = pre+1; j<= n; j++)
     {
         if(a[j]+sum > k)
             continue;
-        res[cur] = a[j];
+        x[i] = a[j];
         if(a[j]+sum == k)
-            display(cur);
-        else seek(cur+1,a[j]+sum,j);
+            display(i);
+        else seek(i+1,a[j]+sum,j);
     }
 }
 int main()
