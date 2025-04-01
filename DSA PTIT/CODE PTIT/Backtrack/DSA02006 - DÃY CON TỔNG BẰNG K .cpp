@@ -13,16 +13,16 @@ void display (int pos)
     }
     cout<<x[pos]<< "] ";
 }
-void seek(int i,int sum, int pre)
+void seek(int i,int preSum, int pre)
 {
     for(int j = pre+1; j<= n; j++)
     {
-        if(a[j]+sum > k)
+        if(a[j]+preSum > k)
             continue;
         x[i] = a[j];
-        if(a[j]+sum == k)
+        if(a[j]+preSum == k)
             display(i);
-        else seek(i+1,a[j]+sum,j);
+        else seek(i+1,a[j]+preSum,j);
     }
 }
 int main()
