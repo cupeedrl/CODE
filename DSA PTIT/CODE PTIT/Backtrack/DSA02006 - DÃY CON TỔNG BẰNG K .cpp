@@ -3,15 +3,15 @@ int n,k,check;
 int a[1001];
 int x[1001];
 using namespace std;
-void display (int size) 
+void display (int pos) 
 {
     check = 1;
     cout<<"[";
-    for(int i = 1; i < size; i++)
+    for(int i = 1; i < pos; i++)
     {
         cout<< x[i]<< " ";
     }
-    cout<<x[size]<< "] ";
+    cout<<x[pos]<< "] ";
 }
 void seek(int i,int sum, int pre)
 {
