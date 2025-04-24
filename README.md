@@ -1,1 +1,20 @@
 # CODE
+
+
+
+
+
+
+THIS FOLDER IS MY SELF-STUDY ON MY CODING PROGRESS. MY CODES SOMETIMES ARE REFERENCED FROM MANY SOURCES AND THEN REMADE ACCORDING TO MY UNDERSTANDING.
+
+
+
+
+GIVE ME A STAR IF YOU GUYS LIKE IT. THANKS FOR READING!
+
+
+
+
+   
+                                 
+                                                                 
