@@ -1,45 +1,40 @@
 #include<bits/stdc++.h>
-using namespace std;
-struct work
-{
-    int sta,fin;
-};
-work task[1005];
-int n,t;
 
-bool cmp(work x, work y)
-{
-    return x.fin < y.fin;
-}
-int greedy()
-{
-    if (n == 0) return 0;
-    int sum = 1, k = 0;// sum = 1, always have a works have already start.
-    sort(task, task+n,cmp);
-
-    for(int j = 1; j<n;j++)
-    {
-        if(task[j].sta >= task[k].fin)
-        {
-            sum++;
-            k = j;
-        }
-    }
-    return sum;
-}
 using namespace std;
+//idea: if increasing elements have located in right pos,
+// it has before pos < after pos
 int main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cin >> t;
-    while(t--)
+	int n;
+	cin>> n;
+	int a[n],pos[n+1];
+	int cnt = 0;
+	for(int i = 1; i <= n; i++)
+	{
+		cin >> a[i];
+		pos[a[i]] = i; //store pos
+	}
+    int len = 1, LIS = 1;
+    for(int j = 2; j <= n; j++)
     {
-        cin >> n;
-        for(int i = 0; i < n;i++) cin >> task[i].sta;
-        for(int i = 0; i < n;i++) cin >> task[i].fin;
-        cout << greedy() << endl;
-
-        
+        if(pos[j] > pos[j-1])// if element has before pos < after pos
+            len++;
+        else
+            len = 1;
+        LIS = max(LIS, len);
     }
+	cout << n-LIS; // steps = n-element which has located in right pos
 }
+
+// pos[4] = 0
+// pos[1] = 1
+// pos[2] = 2
+// pos[5] = 3
+// pos[3] = 4
+
+// pos[1] = 1
+// pos[2] = 2
+// pos[3] = 4
+// pos[4] = 0
+// pos[5] = 3
+// -> 1 2 3 => step number = 5 - 3 
