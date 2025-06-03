@@ -2,6 +2,8 @@
 int n,k;
 int a[1001];
 using namespace std;
+// Eg: 1 2 3 7 8 9, n = 9, k = 6, limitation : a[i] = n-k+i;
+// 1 2 4 5 6 7
 void generate()
 {
     int i = k;
