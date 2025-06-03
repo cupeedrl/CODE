@@ -25,13 +25,12 @@ void dfs(int u, int previous_vertex)
 }
 
 void graph() {
-
+    cin >> v >> e;
     memset(visited,false, sizeof(visited));
     // reset the adjacency list
     for (int i = 1; i <= v; i++) {
         adj[i].clear();
     }   
-    cin >> v >> e;
     for(int i = 1; i <= e; i++)
     {
         int x, y;
