@@ -4,18 +4,17 @@ int v, e;
 vector<vector<int>> adj(1001);
 bool visited[1001];
 bool check;
-//idea: if you are at a position again but not by the lastest way
-// you've come -> circle
+//idea: if you are at a position again but not by the lastest way you've come -> circle
 void dfs(int u, int previous_vertex)
 {
     visited[u] = true;
-    for(auto x : adj[u])
+    for(auto v : adj[u])
     {
-        if(!visited[x])
-            dfs(x, u);
+        if(!visited[v])
+            dfs(v, u);
         else // be at a position again
         {
-            if(x != previous_vertex)//not use the lastest way
+            if(v != previous_vertex)//not use the lastest way
             {
                 check = true;
                 return;
@@ -44,13 +43,14 @@ void graph() {
         if(!visited[i])
         {
             dfs(i,0);
-            if(check) break;
+            if(check) 
+            {
+                cout <<"YES" << endl;
+                return;
+            }    
         }
     }
-    if(check) cout <<"YES" << endl;
-    else
-        cout <<"NO" << endl;
-
+    cout <<"NO" << endl;
 }
 
 int main() {
