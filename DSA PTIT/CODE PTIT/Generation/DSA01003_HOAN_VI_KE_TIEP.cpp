@@ -3,6 +3,9 @@ int n;
 int a[1001];
 using namespace std;
 // for this generation type ex, we shoubld let i start with 1;
+//Eg: 1 2 4 9 8 6 5 2;
+//<-> 1 2 5 9 8 6 4 2;
+// => 1 2 5 2 4 6 8 9;
 void generate()
 {
     int i = n-1;
