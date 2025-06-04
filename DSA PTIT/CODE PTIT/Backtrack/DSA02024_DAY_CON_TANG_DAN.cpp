@@ -25,7 +25,7 @@ void backtracking(int i, int pre)
         if(i > 1 && x[i-1] >= a[j])
             continue;
         x[i] = a[j];
-        if(i != 1) // when array > 1 elments;
+        if(i > 1) // when array > 1 elments;
             add(i);
         if(i<n)
             backtracking(i+1,j);
