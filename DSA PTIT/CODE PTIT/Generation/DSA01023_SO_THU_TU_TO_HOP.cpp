@@ -32,12 +32,12 @@ int main()
         cin >> n >> k;
         check = 0;
 
-        int res = 0, found = 0;
-        for(int i = 1; i<=k; i++)  cin >> b[i];
+        int res = 0;
+        for(int i = 1; i<=k; i++)  cin >> b[i];// enter a array 
 
-        for(int j = 1; j<=k;j++) a[j] = j;// use another array to differ from input one.
+        for(int j = 1; j<=k;j++) a[j] = j;// initial
 
-        while(check == 0 )
+        while(check == 0)
         {
             res++;
             int match = 1;
@@ -51,11 +51,10 @@ int main()
             }
             if(match)
             {
-                found = 1;
                 cout<<res<<endl;
                 break;
             }
-            generate(); // generate all the permutation 
+            generate(); // generate all the permutation and reserve
         }       
     }
 }
