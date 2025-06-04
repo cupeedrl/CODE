@@ -55,7 +55,7 @@ int main() {
             if(inspect(str) == 1)
             {
             	cout<<str<<endl;
-			}
+	    }
         }
     return 0;
 }    
