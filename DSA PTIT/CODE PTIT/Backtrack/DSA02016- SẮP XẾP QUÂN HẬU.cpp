@@ -15,8 +15,8 @@ void Try(int i)
             if(i == n)
             {
             	res++;
-			}
-			else
+	    }
+	    else
             	Try(i+1);
         	chess[j] = dx[i-j+n] = dn[i+j-1] = 0; 
         }    
