@@ -43,12 +43,10 @@ int inspect(string &str)
     return 1;
 }
 int main() {
-
-        cin >> n;
-
+	
+	cin >> n;
         initial();
-
-		check = 0;
+	check = 0;
         while(check == 0)
         {
             generate();
