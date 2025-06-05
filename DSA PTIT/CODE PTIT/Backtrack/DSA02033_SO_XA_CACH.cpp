@@ -16,7 +16,7 @@ bool isValid()
 
 int main()
 {
-	ios::sync_with_stdio(0);
+    ios::sync_with_stdio(0);
     cin.tie(0);
     int t; cin>>t;
     while(t--)
@@ -29,7 +29,7 @@ int main()
         	{
         		for(int i=1; i<=n; ++i) cout<< x[i];
         		cout<<endl;
-			}
-		} while(next_permutation(x+1, x+n+1)); // permutate since 1234;
+		}
+	} while(next_permutation(x+1, x+n+1)); // permutate since 1234;
     }
 }
