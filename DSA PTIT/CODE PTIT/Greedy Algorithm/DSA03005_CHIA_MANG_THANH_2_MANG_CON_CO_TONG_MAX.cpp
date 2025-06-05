@@ -2,7 +2,6 @@
 using namespace std;
 int main()
 {
-
     int t;
     cin >> t;
     while(t--)
@@ -22,8 +21,7 @@ int main()
 		{
 			for(int i = 1; i<=n-k;i++) ans-=a[i];
 			for(int i = n-k+1; i<=n;i++) ans+=a[i];
-		}
-			
+		}	
         cout << ans<< endl;
     }
     return 0;
