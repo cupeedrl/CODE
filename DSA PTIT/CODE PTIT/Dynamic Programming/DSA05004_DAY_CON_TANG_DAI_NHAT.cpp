@@ -28,7 +28,6 @@ int dynamic_programm() // LIS
 }
 int main()
 {
-
     ios::sync_with_stdio(0);
     cin.tie(0);
 
@@ -38,5 +37,15 @@ int main()
        cin >> a[i];
     }
     cout << dynamic_programm() << endl;
-    
 }
+
+
+// Dãy: 2 5 3 7 4 8
+// Ta xử lý từng số:
+// 2: bắt đầu, dãy là [2]
+// 5: lớn hơn 2 → dãy tăng lên: [2 5]
+// 3: nhỏ hơn 5 → thay 5 bằng 3: [2 3]
+// 7: lớn hơn 3 → nối thêm: [2 3 7]
+// 4: nhỏ hơn 7 → thay 7 bằng 4: [2 3 4]
+// 8: lớn hơn 4 → nối thêm: [2 3 4 8]
+//  Kết thúc, ta có dãy dài 4 số tăng dần → kết quả là 4
