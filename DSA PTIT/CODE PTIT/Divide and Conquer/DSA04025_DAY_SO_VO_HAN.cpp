@@ -24,12 +24,12 @@ struct Matrix
     
 };
 
-Matrix Matrix_pow(Matrix a, long long k)
+Matrix Matrix_pow(Matrix a, long long n)
 {
-    if(k == 1)
+    if(n == 1)
         return a;
-    Matrix tmp = Matrix_pow(a,k/2);
-    if(k % 2 == 1)
+    Matrix tmp = Matrix_pow(a,n/2);
+    if(n % 2 == 1)
         return tmp*tmp*a;
     else
         return tmp*tmp; 
