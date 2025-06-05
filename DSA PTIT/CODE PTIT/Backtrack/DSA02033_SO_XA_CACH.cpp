@@ -3,59 +3,33 @@
 
 using namespace std;
 
-int a[101], n, sum;
-bool ok;
+int x[11], n;
 
-void tryAt(int pre, int preSum)
+
+bool isValid()
 {
-    // Base condition: if we have found the solution, exit
-    if (ok) return;
-    
-    // If we've already reached the target sum, stop further exploration
-    if (preSum == sum) {
-        ok = true;
-        return;
-    }
-    
-    // Loop through the elements starting from the next index
-    for (int j = pre + 1; j <= n; ++j) {
-        // If adding the current element exceeds the target sum, skip it
-        if (preSum + a[j] > sum) continue;
-        
-        // Recur to check further by including a[j]
-        tryAt(j, preSum + a[j]);
-    }
+    for(int i=1; i<n; ++i) 
+		if(abs(x[i]-x[i+1]) <= 1)
+			return false; 
+	return true;		
 }
 
 int main()
 {
-    int t; 
-    cin >> t;
-    while (t--) {
-        cin >> n;
-        sum = 0;
-        
-        // Input and calculate the total sum
-        for (int i = 1; i <= n; ++i) {
-            cin >> a[i];
-            sum += a[i];
-        }
-        
-        // If the total sum is odd, it's impossible to split it into two equal parts
-        if (sum % 2) {
-            cout << "NO\n";
-        } else {
-            sum /= 2;  // The target sum for each subset
-            
-            ok = false;  // Reset the flag
-            tryAt(0, 0); // Start recursion from index 0 with a sum of 0
-            
-            // Output result based on the flag
-            if (ok) {
-                cout << "YES\n";
-            } else {
-                cout << "NO\n";
-            }
-        }
+	ios::sync_with_stdio(0);
+    cin.tie(0);
+    int t; cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        for(int i=1; i<=n; ++i) x[i] = i;
+        do
+        {
+        	if(isValid())
+        	{
+        		for(int i=1; i<=n; ++i) cout<< x[i];
+        		cout<<endl;
+			}
+		} while(next_permutation(x+1, x+n+1)); // permutate since 1234;
     }
 }
