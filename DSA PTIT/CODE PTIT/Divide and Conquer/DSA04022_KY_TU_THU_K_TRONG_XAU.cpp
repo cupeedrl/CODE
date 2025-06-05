@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-long long len[93];
-
-char conquer(long long n, long long k) {
+//k: length of string(not include reverse part)
+char conquer(int n, long long k) {
     long long mid = pow(2,n-1);
     if(k == mid)
         return n+64;
