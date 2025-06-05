@@ -12,9 +12,9 @@ void greedy()
         if(max_char<x[i])
             max_char = x[i];
     if((max_char- 1)*(D-1) + max_char > s.length()) cout<<"-1\n";
-    // HAY (max_char- 1)*(D-1) <= max_char - s.length()
-    //Kiểm tra xem tổng số khoảng trống cộng với số ký tự có lớn hơn độ dài chuỗi hay không.
-    //nếu lớn => thừa=> sai
+    // Tính tổng số ô cần.
+    //Kiểm tra xem tổng số khoảng trống cần đề điền các số không thuộc max char, sau đó điền max char vào chỗ còn lại
+    //nếu lớn hơn length gốc => thừa=> sai
     else
         cout<<"1\n";
 }
